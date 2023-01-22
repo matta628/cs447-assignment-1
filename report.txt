@@ -1,0 +1,21 @@
+As the number of threads increases from 1 to about 4, the speedup also increases linearly.
+The improvement in performance with the addition of another thread is most clear at this point.
+Although the speedup gains begin to be sublinear around the addition of the 5th thread,
+there is still notable decrease in execution time. This pattern continues until its peak
+when there are 8 threads. The speedup is greatest when there are 8 threads because the machine
+that my program was executed on has 8 cores. When there are 8 threads every core is being
+utilized optimally, resulting in the highest speedup. However, when there are more than 8
+threads the program is executed as fast as when there are about 6 or 7 threads. Because
+there are more threads than there are processors, this will undoubtable cause a slowdown
+as one or more threads must always wait to be executed on a core. Overall the speedup of
+this program is sublinear, though mostly after more than 4 threads.
+
+The efficiency of this program steadily decreases for the first 4 threads, but then drops
+down significantly after that. The decline from 4 threads to 5 threads in efficiency is
+only beat by the decline from 8 threads to 9 threads. The efficiency for 9 threads is only
+half of the efficiency at one thread, and 10 threads is even worse. In sum, as threads increase
+the efficiency decreases, but theres clear grouping for the efficiency of threads. 1-4 threads
+have pretty similar efficiencies, as do 5-8 threads, and 9-10 threads.
+
+While we learn about algorithms that are linear or superlinear, in practice, these patterns
+are difficult to achieve. 
